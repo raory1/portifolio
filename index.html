@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <div id="cabecalho-links">
+                <img src="./assets/icon.jpg">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT ME</a>
+                <a href="#">NEWS</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div id="theme">
+                <input type="checkbox" id="change-theme"/>
+                <label for="change-theme" class="switch">
+                    <img class="slider" id='theme-icon' src="./assets/sun.svg">
+                </label>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="cards-container">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>Rock, Paper & Scissors</h4>
+                            <a href="#"><button>ver mais</button></a>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>Etch-a-Sketch</h4>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="right-container">
+            <span>a</span>
+        </div>
+    </main>
+    <footer><p>github/raory</p></footer>
+</body>
+</html>

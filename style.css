@@ -1,0 +1,260 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: #E8E8E8;
+    --text-color: #383d66;
+    --shadow: 0px 3px 6px 0px rgba(140, 149, 159, 0.15);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    transition: all .5s ease-in-out;
+}
+
+header{
+    padding: 16px 100px 16px 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+#cabecalho img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#cabecalho-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 61px;
+}
+
+#cabecalho-links a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1px;
+    background-image: linear-gradient(var(--text-color), var(--text-color));
+    background-size: 0% 0.15em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+
+#cabecalho-links a:hover{
+    background-size: 100% 0.15em; 
+}
+
+#theme{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#change-theme {
+    display: none;
+}
+
+.switch{
+    position: relative;
+    background-color: var(--text-color);
+    width: 72px;
+    height: 32px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+#theme-icon.slider {
+    position: absolute;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+}
+
+#change-theme:checked ~ .switch {
+    background-color: var(--text-color);
+}
+
+#change-theme:checked ~ .switch .slider {
+    transform: translateX(36px);
+}
+
+main {
+    display: flex;
+}
+
+.wrapper {
+    width: 100%;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(0.28, -0.03, 0, 0.99);
+    box-shadow: var(--shadow);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: var(--text-color);
+    color: var(--background-color);
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    box-shadow: 0px 3px 6px 0px rgba(20, 23, 26, 0.281);
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+    gap: 24px
+}
+
+.description p {
+    color: var(--background-color);
+    padding-top: 5px;
+}
+
+.description h4, button {
+    text-transform: uppercase;
+}
+
+.description button {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    border-radius: 1px;
+    padding: 8px 16px;
+    border: 2px solid var(--text-color);
+    color: var(--background-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 var(--text-color);
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    outline: none; 
+}
+
+.description button:hover{
+    box-shadow: inset 400px 0 0 0 var(--text-color);
+}
+
+.description a {
+    color: var(--background-color);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label {
+    width: 600px;
+}
+
+input[type="radio"] + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+input[type="radio"]:checked + label .description button {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.card[for="c1"] {
+    background-image: url('./assets/rock-paper-scissors.jpg');
+}
+
+.card[for="c2"] {
+    background-image: url('./assets/etch-a-sketch.jpg');
+}
+
+.right-container {
+    width: 50%;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
